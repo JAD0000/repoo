@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CodeShack Export</title>
+    <style>
+        *, *::before, *::after {
+          box-sizing: border-box;
+        }
+        
+        body {
+          font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+          margin: 0;
+          background: #111827;
+          color: #ffffff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+        }
+        
+        .wave-container {
+          text-align: center;
+        }
+        
+        .wave-container h2 {
+          color: #64748b;
+          font-weight: 500;
+          margin-bottom: 40px;
+          font-size: 1.25rem;
+        }
+        
+        .staggered-text {
+          font-size: clamp(3rem, 8vw, 6rem);
+          font-weight: 900;
+          letter-spacing: 4px;
+          cursor: default;
+          display: flex;
+        }
+        
+        .staggered-text span {
+          display: inline-block;
+          color: #ffffff;
+          transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.4s ease;
+        }
+        
+        .staggered-text:hover span {
+          transform: translateY(-20px);
+          color: #3b82f6;
+        }
+        
+        /* Staggered Delays cleanly coded */
+        .staggered-text:hover .l-1 { transition-delay: 0.00s; }
+        .staggered-text:hover .l-2 { transition-delay: 0.05s; }
+        .staggered-text:hover .l-3 { transition-delay: 0.10s; }
+        .staggered-text:hover .l-4 { transition-delay: 0.15s; }
+        .staggered-text:hover .l-5 { transition-delay: 0.20s; }
+        .staggered-text:hover .l-6 { transition-delay: 0.25s; }
+        .staggered-text:hover .l-7 { transition-delay: 0.30s; }
+        .staggered-text:hover .l-8 { transition-delay: 0.35s; }
+        .staggered-text:hover .l-9 { transition-delay: 0.40s; }
+        .staggered-text:hover .l-10 { transition-delay: 0.45s; }
+        .staggered-text:hover .l-11 { transition-delay: 0.50s; }
+    </style>
+</head>
+<body>
+    <div class="wave-container">
+      <h2>Hover the text below:</h2>
+      
+      <div class="staggered-text">
+        <!-- Using specific spans securely without nth-child logic to guarantee performance -->
+        <span class="l-1">I</span>
+        <span class="l-2">N</span>
+        <span class="l-3">T</span>
+        <span class="l-4">E</span>
+        <span class="l-5">R</span>
+        <span class="l-6">A</span>
+        <span class="l-7">C</span>
+        <span class="l-8">T</span>
+        <span class="l-9">I</span>
+        <span class="l-10">O</span>
+        <span class="l-11">N</span>
+      </div>
+    </div></body>
+</html>
